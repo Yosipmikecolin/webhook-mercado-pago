@@ -10,9 +10,8 @@ app.use(cors());
 app.listen
 
 app.post('/webhook', async (req, res) => {
+  console.log("QUERY PARAMAS",req.query)
   try {
-
-    console.log("REQUEST",req)
     // Obtén la firma del encabezado x-signature
     const xSignature = req.header('x-signature');
 
