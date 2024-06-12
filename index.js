@@ -11,6 +11,8 @@ app.listen
 
 app.post('/webhook', async (req, res) => {
   try {
+
+    console.log("REQUEST",req)
     // Obtén la firma del encabezado x-signature
     const xSignature = req.header('x-signature');
 
